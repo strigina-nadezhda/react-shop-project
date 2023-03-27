@@ -1,0 +1,76 @@
+* {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130.02%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #FFFFFF;
+}
+
+header {
+  padding: 0 15px;
+}
+
+footer {
+  padding: 0 15px;
+}
+
+.catalog {
+  padding: 0 15px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.black {
+  color: #111111;
+}
+
+.blue {
+  color: #3F4E65;
+}
+
+.white {
+  color: white;
+}
+
+.underline {
+  font-size: 10px;
+  line-height: 15px;
+  text-decoration-line: underline;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.think {
+  font-weight: 300;
+}
+
+.btn {
+  height: 59px;
+  width: 200px;
+  border-radius: 30px;
+  background-color: #FFC85E;
+  color: white;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=main.css.map */

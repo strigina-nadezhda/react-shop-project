@@ -1,0 +1,104 @@
+footer {
+  background-color: #3F4E65;
+  color: white;
+  font-size: 16px;
+}
+footer .footer-wrapper {
+  max-width: 1360px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 71px 0 100px;
+}
+@media (max-width: 1305px) {
+  footer .footer-wrapper {
+    max-width: 1060px;
+  }
+}
+
+.my5 {
+  margin: 5px 0;
+}
+
+.mt20 {
+  margin: 20px 0 0;
+}
+
+.logo img {
+  margin-bottom: 15px;
+}
+.logo p {
+  max-width: 320px;
+  font-size: 16px;
+  line-height: 150%;
+  margin-bottom: 45px;
+}
+
+.links ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.links ul li {
+  margin-bottom: 20px;
+}
+.links ul li:last-child {
+  margin-bottom: 0;
+}
+.links .link {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 20px;
+  margin: 7px 0 25px;
+}
+
+.text {
+  margin: 25px 0 15px;
+}
+
+.icons {
+  margin: 15px 0 0;
+}
+.icons img:last-child {
+  margin-left: 10px;
+}
+
+.email-input {
+  width: 100%;
+  max-width: 282px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: none;
+  border-radius: 36px;
+  background: #EDEDED;
+  margin-top: 14px;
+  box-sizing: border-box;
+}
+.email-input #searchInput {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  padding-left: 10px;
+}
+.email-input #searchBtn {
+  width: 39px;
+  height: 39px;
+  background-color: #FFC85E;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.email-input #searchBtn:hover {
+  background-color: white;
+  color: #FFC85E;
+}
+
+/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,190 @@
+$blue-text-color: #3F4E65;
+$black-text-color: #111111;
+$yellow-color: #FFC85E;
+
+
+
+hr {
+
+    background-color: $blue-text-color;
+    opacity: 0.2;
+    margin: 0;
+}
+
+nav {
+    max-width: 1360px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+
+
+    @media (max-width:1305px) {
+        max-width: 1060px;
+    }
+
+    .info {
+        display: flex;
+
+        &-content {
+            display: flex;
+            align-items: center;
+            margin-right: 40px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &_icon {
+                margin: 0 15px 0 0;
+                color: $blue-text-color;
+                font-size: 17px;
+            }
+        }
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 150%;
+                color: $blue-text-color;
+                margin-right: 60px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.menu {
+    max-width: 1360px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+
+    @media (max-width:1305px) {
+        max-width: 1060px;
+    }
+
+    .manager {
+        display: flex;
+        align-items: center;
+
+        &-text {
+            margin-right: 10px;
+            text-align: end;
+
+            p.think {
+                margin: 5px 0;
+            }
+        }
+    }
+
+    .basket {
+        width: 128px;
+
+        .basket-wrap {
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            position: relative;
+            right: 0;
+            top: 0;
+            display: block;
+            background: url('/public/images/basket.svg'
+                ) center no-repeat;
+            background-size: 41px;
+        }
+
+        &__counter {
+            width: 22px;
+            height: 22px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 22px;
+            color: white;
+            position: absolute;
+            border: 3px solid white;
+            border-radius: 15px;
+            display: block;
+            transform: scale(1);
+
+            right: -7px;
+            margin: auto;
+            background: $yellow-color;
+        }
+
+        &__amount {
+            width: 60px;
+            position: absolute;
+            bottom: 7px;
+            left: 67px;
+            color: $black-text-color;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        &__title {
+
+            position: absolute;
+            bottom: 24px;
+            left: 69px;
+            color: $blue-text-color;
+        }
+
+    }
+}
+
+.searchBar {
+
+    max-width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 36px;
+    background: #EDEDED;
+
+    #searchInput {
+        max-width: 150px;
+        background: none;
+        flex: 1;
+        border: none;
+        outline: none;
+        font-size: 1.2rem;
+        padding-left: 10px;
+    }
+
+    #searchBtn {
+        width: 39px;
+        height: 39px;
+        background-color: $yellow-color;
+        color: #fff;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: white;
+            color: $yellow-color;
+        }
+    }
+}

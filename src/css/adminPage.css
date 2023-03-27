@@ -1,0 +1,41 @@
+table,
+th,
+td {
+  border: solid 1px #3F4E65;
+  padding: 10px;
+}
+
+table {
+  margin: auto;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  caption-side: bottom;
+  text-align: center;
+  max-width: 1360px;
+  width: 100%;
+}
+@media (max-width: 1305px) {
+  table {
+    max-width: 1060px;
+  }
+}
+table img {
+  margin: auto;
+  max-height: 75px;
+}
+
+.adminPage {
+  max-width: 1360px;
+  margin: auto;
+}
+.adminPage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.adminPage-header h1 {
+  font-weight: 500;
+  font-size: 40px;
+}
+
+/*# sourceMappingURL=adminPage.css.map */

@@ -1,0 +1,47 @@
+$blue-text-color: #3F4E65;
+$black-text-color: #111111;
+$yellow-color: #FFC85E;
+
+table,
+th,
+td {
+    border: solid 1px $blue-text-color;
+    padding: 10px;
+}
+
+table {
+    margin: auto;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    caption-side: bottom;
+    text-align: center;
+    max-width: 1360px;
+    width: 100%;
+
+    @media (max-width:1305px) {
+        max-width: 1060px;
+    }
+
+    img {
+        margin: auto;
+        max-height: 75px;
+    }
+}
+
+
+
+.adminPage {
+    max-width: 1360px;
+    margin: auto;
+
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            font-weight: 500;
+            font-size: 40px;
+        }
+    }
+}
