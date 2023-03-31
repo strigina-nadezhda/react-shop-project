@@ -27,10 +27,18 @@
   display: flex;
   margin: auto;
   max-width: 1360px;
+  margin-bottom: 100px;
+  padding: 0 15px;
 }
-@media (max-width: 1305px) {
+@media (max-width: 1380px) {
   .box {
     max-width: 1060px;
+  }
+}
+@media (max-width: 900px) {
+  .box {
+    margin-top: 20px;
+    margin-bottom: 50px;
   }
 }
 .box__left {
@@ -55,7 +63,7 @@
     text-align: center;
   }
   .box__left--img {
-    width: 75%;
+    object-fit: contain;
   }
   .box__right {
     width: 100%;

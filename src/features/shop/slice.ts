@@ -1,24 +1,26 @@
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { createSlice } from "@reduxjs/toolkit";
-import { products } from "../../products";
-import { IProduct } from "../../store/types/types";
+import { categories } from "../../products";
 import { Range } from "../../utils/range";
 
 export interface ShopFilters {
   manufacturers: string[];
   manufacturersFilter: string;
   priceRange: Range;
+  selectedCategories: string[];
 }
 
 export interface ShopState {
-  products: IProduct[];
+  categories: string[];
   sortKey: string;
+  page: number;
   filters: ShopFilters;
 }
 
 const initialState: ShopState = {
-  products: products,
-  sortKey: "title",
+  categories: categories,
+  sortKey: "titleUp",
+  page: 0,
   filters: {
     manufacturers: [],
     manufacturersFilter: "",
@@ -26,6 +28,7 @@ const initialState: ShopState = {
       start: 0,
       end: 10000,
     },
+    selectedCategories: [],
   },
 };
 
@@ -56,6 +59,18 @@ export const shopSlice = createSlice({
     changePriceRangeEnd: (state, action: PayloadAction<number>) => {
       state.filters.priceRange.end = action.payload;
     },
+    changeCategory: (state, action: PayloadAction<string>) => {
+      let filterCategories = state.filters.selectedCategories;
+      if (filterCategories.includes(action.payload)) {
+        let i = filterCategories.indexOf(action.payload);
+        filterCategories.splice(i, 1);
+      } else {
+        filterCategories.push(action.payload);
+      }
+    },
+    changePage: (state, action: PayloadAction<number>) => {
+      state.page = action.payload;
+    },
   },
 });
 
@@ -65,6 +80,8 @@ export const {
   manufactorerFilterChanged,
   changePriceRangeStart,
   changePriceRangeEnd,
+  changeCategory,
+  changePage,
 } = shopSlice.actions;
 
 export default shopSlice.reducer;

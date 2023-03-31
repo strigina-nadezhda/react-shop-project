@@ -1,171 +1,149 @@
-import React, { FC } from "react";
-import { useState } from "react";
+import { FC, useState } from "react";
 import { MdChevronLeft } from "react-icons/md";
-import "../css/basket.css"
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { BasketCounterBtn } from "../components/BasketCounterBtn";
+import "../css/basket.css";
+import { BasketSelector } from "../features/basket/selector";
+import { clearBasket, deleteProduct } from "../features/basket/slice";
 
 const BasketPage: FC = () => {
-  // btn добавить в корзину
-  const addBasket = (id: any) => {
-    console.log("addBasket", id);
-  };
+  const totalPrice = useSelector(BasketSelector.totalPrice);
 
-  // btn оформить заказ
-  const checkoutBask = (id: any) => {
-    console.log(" checkoutBask", id);
-    alert("Вы оформили заказ");
-    // что после? почистить корзину!
+  //image src
+  const imgSrc = (img: string, i: number) => {
+    if (img.includes("http")) {
+      return img;
+    } else {
+      return `/images/${basket[i].product.img}`;
+    }
   };
-
   // btn НАЗАД
   const back = (id: any) => {
     console.log(" back", id);
     alert("back");
   };
 
-  let [count, setCount] = useState(0);
+  const basket = useSelector(BasketSelector.products);
+  const dispatch = useDispatch();
 
-  function incrementCount(list: any) {
-    if (count > 0) {
-      count = count - 1;
-    }
-    setCount(count);
-    console.log(list.brend, count);
-  }
-  function decrementCount(list: any) {
-    count = count + 1;
-    setCount(count);
-    console.log(list.brend, count);
-  }
+  //dialog
+  const [openModal, setOpenModal] = useState(true);
+  const openDialog = () => {
+    setOpenModal(false);
+  };
 
-  // массив в корзине
-  const list = [
-    {
-      title: "BioMio BIO-SOAP Экологичное туалетное мыло. Литсея и бергамот",
-      unit: "Вес",
-      size: "90",
-      barcode: "4604049097552",
-      manufacturer: "BioMio",
-      brend: "BioMio",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis. Faucibus consectetur aliquet sed pellentesque consequat consectetur congue mauris venenatis. Nunc elit, dignissim sed nulla ullamcorper enim, malesuada.",
-      price: "13,76 ",
-    },
-    {
-      title: "ARIEL Автмат Гель СМС жидкое в растворимых капсулах ...",
-      unit: "Вес",
-      size: "900",
-      barcode: "7804049097552",
-      manufacturer: "BJH",
-      brend: "LOL",
-      description:
-        "LOL ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis. Faucibus consectetur aliquet sed pellentesque consequat consectetur congue mauris venenatis. Nunc elit, dignissim sed nulla ullamcorper enim, malesuada.",
-      price: "16,76 ",
-    },
-  ];
-
+  const closeDialog = () => {
+    setOpenModal(true);
+    dispatch(clearBasket());
+  };
   return (
     <div className="bask">
-      <div className="bask__back">
+      <Link to={"/catalog"} className="btn-back_wrap"> <button className="btn-back btn"><img src="../images/arrow-back.svg" alt="back" /></button> <p>Назад </p> </Link>
+
+
+
+      <div className="bask__title">Корзина</div>
+
+      <h1
+        style={{ display: basket.length === 0 ? "flex" : "none" }}
+        className="pusto"
+      >
+        В КОРЗИНЕ НИЧЕГО НЕТ
+      </h1>
+      <hr className="bask__line"></hr>
+
+      <div className="basket-products">
+        {basket.map((item, i) => (
+          <div>
+            <div className="bask__card">
+              <div className="bask__card--img">
+                <img
+                  className="bask__card--images"
+                  src={imgSrc(item.product.img, i)}
+                  alt="card"
+                />
+              </div>
+
+              <div>
+                <div className="bask__card--size">
+                  <img
+                    src={
+                      item.product.unit === "Вес"
+                        ? "/images/box-icon.svg"
+                        : "/images/bottle-icon.svg"
+                    }
+                    alt="box-icon"
+                  />
+                  <p className="bask__card--size-text">
+                    {item.product.size}{" "}
+                    {item.product.unit === "Вес" ? " гр" : " мл"}
+                  </p>
+                </div>
+                <div className="bask__card--title">{item.product.title}</div>
+                <div className="bask__card--description">
+                  {item.product.description}
+                </div>
+              </div>
+
+              <hr className="bask__vertical bask__vertical--left"></hr>
+
+              <div className="bask__box">
+                <BasketCounterBtn {...item.product} />
+
+                <hr className="bask__vertical"></hr>
+
+                <div className="bask__price">{item.product.price} ₸</div>
+
+                <hr className="bask__vertical"></hr>
+
+                <button
+                  type="button"
+                  className="bask__btn"
+                  onClick={() => {
+                    dispatch(deleteProduct(item.product));
+                  }}
+                >
+                  <img src="/images/basket-card.svg" alt="basket-card" />
+                </button>
+              </div>
+            </div>
+            <hr className="bask__line"></hr>
+          </div>
+        ))}
+      </div>
+
+      <dialog id="tnkDialog" open={!openModal}>
+        <h3 className="dialog__title">Спасибо за заказ!</h3>
+
         <button
           type="button"
-          className="bask__back--btn"
+          id="close-btn"
+          className="btn btn-close "
           onClick={() => {
-            back("Назад: путь");
+            closeDialog();
           }}
         >
-          <MdChevronLeft />
+          <Link to={"/catalog"}>Спасибо!</Link>{" "}
         </button>
-        <div className="bask__back--text"> НАЗАД</div>
-      </div>
-      <div className="bask__title">Корзина</div>
-      <div className="bask__line"></div>
+      </dialog>
 
-      {list.map((item) => (
-        <div>
-          <div className="bask__card">
-            <div className="bask__card--img">
-              <img
-                className="bask__card--images"
-                src="./images/card.png"
-                alt="card"
-              />
-            </div>
 
-            <div>
-              <div className="bask__card--size">
-                <img
-                  src={
-                    item.unit === "Вес"
-                      ? "./images/box-icon.svg"
-                      : "./images/bottle-icon.svg"
-                  }
-                  alt="box-icon"
-                />
-                <p className="bask__card--size-text">
-                  {item.size} {item.unit === "Вес" ? " кг" : " мл"}
-                </p>
-              </div>
-              <div className="bask__card--title">{item.title}</div>
-              <div className="bask__card--description">{item.description}</div>
-            </div>
-
-            <div className="bask__vertical bask__vertical--left"></div>
-
-            <div className="bask__box">
-              <div className="bask__count">
-                <button
-                  className="bask__count--mark"
-                  style={{ marginRight: "17px" }}
-                  onClick={() => {
-                    incrementCount(list);
-                  }}
-                >
-                  -
-                </button>
-                <div>{count}</div>
-                <button
-                  className="bask__count--mark"
-                  style={{ marginLeft: "17px" }}
-                  type="button"
-                  onClick={() => {
-                    decrementCount(list);
-                  }}
-                >
-                  +
-                </button>
-              </div>
-
-              <div className="bask__vertical"></div>
-
-              <div className="bask__price">{item.price} ₸</div>
-
-              <div className="bask__vertical"></div>
-
-              <button
-                type="button"
-                className="bask__btn"
-                onClick={() => {
-                  addBasket(item.barcode);
-                }}
-              >
-                <img src="./images/basket-card.svg" alt="basket-card" />
-              </button>
-            </div>
-          </div>
-          <div className="bask__line"></div>
-        </div>
-      ))}
-      <div className="bask__footer">
+      <div
+        className="bask__footer"
+        style={{ display: basket.length === 0 ? "none" : "flex" }}
+      >
         <button
           type="button"
           className="bask__checkout"
+          id="open-btn"
           onClick={() => {
-            checkoutBask("checkoutBask: цена");
+            openDialog();
           }}
         >
           Оформить заказ
         </button>
-        <div className="bask__sum">1 348,76 ₸</div>
+        <div className="bask__sum">{totalPrice} ₸</div>
       </div>
     </div>
   );

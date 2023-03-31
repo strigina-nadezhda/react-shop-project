@@ -7,6 +7,7 @@ export interface ITypes {
 }
 export interface IProduct {
     img: string;
+    bigImg: string;
     title: string;
     unit: string;
     size: string;

@@ -15,20 +15,40 @@
   font-style: normal;
   max-width: 1360px;
   margin: auto;
+  padding: 0 15px;
 }
-@media (max-width: 1305px) {
+.bask .pusto {
+  justify-content: center;
+  font-weight: 500;
+  font-size: 30px;
+  color: #3F4E65;
+}
+@media (max-width: 1380px) {
   .bask {
     max-width: 1060px;
   }
 }
+@media (max-width: 900px) {
+  .bask {
+    margin-top: 20px;
+  }
+}
 .bask__title {
   font-weight: 500;
-  font-size: 40px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #111111;
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .bask__title {
+    margin-top: 25px;
+  }
 }
 @media (max-width: 600px) {
   .bask__title {
     font-weight: 500;
-    font-size: 20px;
+    font-size: 50px;
   }
 }
 .bask__line {
@@ -37,7 +57,7 @@
   opacity: 0.3;
   margin: 50px 0px 50px 0px;
 }
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .bask__line {
     margin: 20px 0px 20px 0px;
   }
@@ -95,9 +115,15 @@
     width: 100%;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .bask__card--img {
     margin-right: 0;
+    display: flex;
+    justify-content: center;
+    max-height: 200px;
+  }
+  .bask__card--img img {
+    object-fit: contain;
   }
 }
 .bask__card--images {
@@ -173,9 +199,6 @@
   border: none;
   cursor: pointer;
 }
-.bask__btn:hover {
-  background-color: rgba(255, 198, 80, 0.3);
-}
 .bask__checkout {
   width: 192px;
 }
@@ -228,6 +251,71 @@
 }
 .bask__back--btn:hover {
   background-color: #FFC85E;
+}
+.bask #tnkDialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 15vh;
+  width: 40%;
+  max-width: 80rem;
+  padding: 3em;
+  background: #fff;
+  color: #656e77;
+  box-shadow: 0 0 5px rgba(101, 110, 119, 0.2);
+  border: 0;
+  text-align: center;
+  border: 2px solid #FFC85E;
+}
+@media (max-width: 600px) {
+  .bask #tnkDialog {
+    width: 60%;
+  }
+}
+.bask #tnkDialog[open] {
+  animation: 0.7s linear slidein;
+}
+.bask #tnkDialog::backdrop {
+  background: rgba(43, 43, 43, 0.56);
+  animation: 0.5s ease fade;
+}
+.bask #tnkDialog .dialog__title {
+  color: #3F4E65;
+  font-weight: 500;
+  font-size: 40px;
+}
+@media (max-width: 900px) {
+  .bask #tnkDialog .dialog__title {
+    font-weight: 400;
+    font-size: 25px;
+  }
+}
+.bask #tnkDialog .btn-close {
+  margin: auto;
+}
+.bask #tnkDialog .btn-close a {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: white;
+  height: 60px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bask #tnkDialog .btn-close a:hover {
+  color: #FFC85E;
+}
+@keyframes fade {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=basket.css.map */

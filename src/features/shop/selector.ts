@@ -3,12 +3,17 @@ import { ShopFilters } from "./slice";
 import { RootState } from "../../store";
 import { IProduct } from "../../store/types/types";
 import { rangeContains } from "../../utils/range";
+import { ProductsSelector } from "../products/selector";
 
-const products = (state: RootState) => state.shop.products;
 const filters = (state: RootState) => state.shop.filters;
+const products = ProductsSelector.products;
 
 export namespace ShopSelector {
   export const sortKey = (state: RootState) => state.shop.sortKey;
+  export const categories = (state: RootState) => state.shop.categories;
+  export const selectedCategories = (state: RootState) =>
+    state.shop.filters.selectedCategories;
+  export const pageNum = (state: RootState) => state.shop.page;
 
   export const filteredProducts = createSelector(
     sortKey,
@@ -19,6 +24,26 @@ export namespace ShopSelector {
       const sorted = sort(filtered, sortKey);
       return sorted;
     }
+  );
+
+  export const filteredProductsPages = createSelector(
+    filteredProducts,
+    (filteredProducts) => {
+      let pages = [];
+      let pageSize = 6;
+      let products = filteredProducts;
+      for (let i = 0; i < filteredProducts.length; i += pageSize) {
+        let page = products.slice(i, i + pageSize);
+        pages.push(page);
+      }
+      return pages;
+    }
+  );
+
+  export const currentPage = createSelector(
+    filteredProductsPages,
+    pageNum,
+    (pages, pageNumber) => pages[pageNumber]
   );
 
   export const manufacturers = createSelector(products, (products) =>
@@ -70,8 +95,10 @@ function sort(products: IProduct[], sortKey: string): IProduct[] {
     return [...products].sort((a, b) => {
       return parseFloat(b.price) - parseFloat(a.price);
     });
-  } else {
+  } else if (sortKey === "titleUp") {
     return [...products].sort((a, b) => a.title.localeCompare(b.title));
+  } else {
+    return [...products].sort((a, b) => b.title.localeCompare(a.title));
   }
 }
 
@@ -85,6 +112,7 @@ function filter(products: IProduct[], filters: ShopFilters): IProduct[] {
 
   filtered = filterByManufacturers(filters, filtered);
   filtered = filterByPrice(filters, filtered);
+  filtered = filterByCategory(filters, filtered);
 
   return filtered;
 }
@@ -102,4 +130,14 @@ function filterByPrice(filters: ShopFilters, filtered: IProduct[]) {
   return filtered.filter((e) =>
     rangeContains(filters.priceRange, parseFloat(e.price))
   );
+}
+
+function filterByCategory(filters: ShopFilters, filtered: IProduct[]) {
+  if (filters.selectedCategories.length !== 0) {
+    return filtered.filter((e) =>
+      e.type?.some((el) => filters.selectedCategories.includes(el))
+    );
+  } else {
+    return filtered;
+  }
 }

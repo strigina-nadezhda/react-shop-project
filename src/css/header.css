@@ -1,7 +1,16 @@
-hr {
+.header-main {
+  padding: 0;
+}
+
+.header-hr {
   background-color: #3F4E65;
   opacity: 0.2;
   margin: 0;
+}
+@media (max-width: 900px) {
+  .header-hr {
+    display: none;
+  }
 }
 
 nav {
@@ -9,9 +18,9 @@ nav {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  padding: 14px 0;
+  padding: 14px 15px;
 }
-@media (max-width: 1305px) {
+@media (max-width: 1380px) {
   nav {
     max-width: 1060px;
   }
@@ -23,6 +32,11 @@ nav .info-content {
   display: flex;
   align-items: center;
   margin-right: 40px;
+}
+@media (max-width: 950px) {
+  nav .info-content {
+    margin-right: 15px;
+  }
 }
 nav .info-content:last-child {
   margin-right: 0;
@@ -48,9 +62,25 @@ nav .links ul li {
   line-height: 150%;
   color: #3F4E65;
   margin-right: 60px;
+  margin-bottom: 0;
+}
+@media (max-width: 1200px) {
+  nav .links ul li {
+    margin-right: 20px;
+  }
+}
+@media (max-width: 950px) {
+  nav .links ul li {
+    margin-right: 15px;
+  }
 }
 nav .links ul li:last-child {
   margin-right: 0;
+}
+@media (max-width: 900px) {
+  nav {
+    display: none;
+  }
 }
 
 .menu {
@@ -59,9 +89,12 @@ nav .links ul li:last-child {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 0;
+  padding: 12px 15px;
 }
-@media (max-width: 1305px) {
+.menu img {
+  margin-right: 10px;
+}
+@media (max-width: 1380px) {
   .menu {
     max-width: 1060px;
   }
@@ -70,12 +103,22 @@ nav .links ul li:last-child {
   display: flex;
   align-items: center;
 }
-.menu .manager-text {
+@media (max-width: 1380px) {
+  .menu .manager {
+    display: none;
+  }
+}
+.menu .manager__text {
   margin-right: 10px;
   text-align: end;
 }
-.menu .manager-text p.think {
+.menu .manager__text p.think {
   margin: 5px 0;
+}
+@media (max-width: 1200px) {
+  .menu .manager__btn {
+    display: none;
+  }
 }
 .menu .basket {
   width: 128px;
@@ -124,6 +167,11 @@ nav .links ul li:last-child {
   left: 69px;
   color: #3F4E65;
 }
+@media (max-width: 900px) {
+  .menu {
+    display: none;
+  }
+}
 
 .searchBar {
   max-width: 350px;
@@ -153,10 +201,20 @@ nav .links ul li:last-child {
   border: none;
   border-radius: 50px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .searchBar #searchBtn:hover {
   background-color: white;
   color: #FFC85E;
+  border: 2px solid #FFC85E;
+}
+.searchBar #searchBtn:hover img {
+  filter: invert(20%) sepia(60%) saturate(2476%);
+}
+.searchBar #searchBtn img {
+  margin: 0;
 }
 
 /*# sourceMappingURL=header.css.map */

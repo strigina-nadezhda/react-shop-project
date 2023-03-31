@@ -13,7 +13,8 @@ export const Sort: React.FC = () => {
 
             <select name="sort" id="sort-select" value={sortKey} onChange={(event) => dispatch(changeSortKey(event.target.value))} >
 
-                <option value="titleUp" >По названию</option>
+                <option value="titleUp" >Название А-Я</option>
+                <option value="titleDown" >Название Я-А</option>
                 <option value="priceDown">По возрастанию</option>
                 <option value="priceUp">По убыванию</option>
 

@@ -36,9 +36,16 @@ $yellow-color: #FFC85E;
     display: flex;
     margin: auto;
     max-width: 1360px;
+    margin-bottom: 100px;
+    padding: 0 15px;
 
-    @media (max-width:1305px) {
+    @media (max-width:1380px) {
         max-width: 1060px;
+    }
+
+    @media (max-width:900px) {
+        margin-top: 20px;
+        margin-bottom: 50px;
     }
 
     &__left {
@@ -66,7 +73,7 @@ $yellow-color: #FFC85E;
             text-align: center;
 
             &--img {
-                width: 75%;
+                object-fit: contain;
             }
         }
 
