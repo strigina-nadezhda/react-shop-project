@@ -157,4 +157,8 @@ a {
         object-fit: contain;
         max-width: inherit;
     }
+
+    @media (max-width: 500px) {
+        display: none;
+    }
 }

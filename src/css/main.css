@@ -133,5 +133,10 @@ a {
   object-fit: contain;
   max-width: inherit;
 }
+@media (max-width: 500px) {
+  .main-page {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
