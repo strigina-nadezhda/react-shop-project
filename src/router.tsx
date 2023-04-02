@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import {
   createBrowserRouter,
+  createHashRouter,
   Link,
   redirect,
   RouterProvider,
@@ -17,7 +18,7 @@ import { IProduct } from "./store/types/types";
 const RouterElement: React.FC = () => {
   const products = useSelector(ProductsSelector.products);
 
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: "/",
       element: <App />,

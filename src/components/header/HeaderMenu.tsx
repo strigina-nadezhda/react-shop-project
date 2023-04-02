@@ -10,12 +10,12 @@ export const HeaderMenu: React.FC = () => {
   return (
     <div className="menu">
       <Link to={"/"}>
-        <img src="/images/header-logo.svg" alt="card" />
+        <img src="./images/header-logo.svg" alt="card" />
       </Link>
       <Link to={"/catalog"}>
         <button className="btn">
           Каталог
-          <img src="/images/catalog.svg" alt="arrow" className="btn-icon" />
+          <img src="./images/catalog.svg" alt="arrow" className="btn-icon" />
         </button>
       </Link>
 
@@ -27,7 +27,7 @@ export const HeaderMenu: React.FC = () => {
           placeholder="Поиск..."
         />
         <button id="searchBtn" type="submit" name="searchBtn">
-          <img src="/images/search.svg" alt="icon" />
+          <img src="./images/search.svg" alt="icon" />
         </button>
       </div>
 
@@ -37,11 +37,11 @@ export const HeaderMenu: React.FC = () => {
           <p className="think blue">время работы: 9:00-20:00</p>
           <p className="underline blue">Заказать звонок</p>
         </div>
-        <img src="/images/callcentre.png" alt="manager" />
+        <img src="./images/callcentre.png" alt="manager" />
       </div>
       <button className="btn manager__btn">
         Прайс-лист
-        <img src="/images/download.svg" alt="arrow" className="btn-icon" />
+        <img src="./images/download.svg" alt="arrow" className="btn-icon" />
       </button>
       <div className="basket">
         <Link to={"/basket"}>

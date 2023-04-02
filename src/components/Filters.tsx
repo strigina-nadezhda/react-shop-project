@@ -41,7 +41,7 @@ export const Filters: FC = () => {
     <div className="filters">
       <div style={{ display: "flex", alignItems: "center" }}>  <h4>ПОДБОР ПО ПАРАМЕТРАМ</h4>
         <button className="btn-up-filters " onClick={toogleFilters}>
-          {isShow ? <img src="/images/arrow-up-mobile.svg" alt="up" /> : <img src="/images/arrow-down-mobile.svg" alt="down" />}
+          {isShow ? <img src="./images/arrow-up-mobile.svg" alt="up" /> : <img src="./images/arrow-down-mobile.svg" alt="down" />}
         </button>
       </div>
       {!isShow && <div>
@@ -87,7 +87,7 @@ export const Filters: FC = () => {
               }
             />
             <button id="searchBtn" type="submit" name="searchBtn">
-              <img src="/images/search.svg" alt="icon" />
+              <img src="./images/search.svg" alt="icon" />
             </button>
           </div>
           <div className="manufacturer-chekbox">
@@ -106,9 +106,9 @@ export const Filters: FC = () => {
                     checked={selectedManufactorers.includes(manufacturer)}
                     onChange={() => dispatch(toggleManufacturer(manufacturer))}
                   />
-                  <p className="think blue"> {manufacturer}</p>{" "}
+                  <p className="think blue"> {manufacturer}</p>
                   <p className="think blue">
-                    {" "}
+
                     ({counters.get(manufacturer) ?? 0})
                   </p>
                 </label>
@@ -130,9 +130,9 @@ export const Filters: FC = () => {
                     checked={selectedManufactorers.includes(manufacturer)}
                     onChange={() => dispatch(toggleManufacturer(manufacturer))}
                   />
-                  <p className="think blue"> {manufacturer}</p>{" "}
+                  <p className="think blue"> {manufacturer}</p>
                   <p className="think blue">
-                    {" "}
+
                     ({counters.get(manufacturer) ?? 0})
                   </p>
                 </label>

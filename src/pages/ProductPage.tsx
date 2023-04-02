@@ -16,7 +16,7 @@ export const ProductPage: FC = () => {
     if (img.includes("http")) {
       return img;
     } else {
-      return `/images/${product.bigImg}`;
+      return `./images/${product.bigImg}`;
     }
   };
 
@@ -37,7 +37,7 @@ export const ProductPage: FC = () => {
   return (
     <div className="wrapper">
       <div className="box">
-        <Link to={"/catalog"} className="btn-back_wrap"> <button className="btn-back btn"><img src="../images/arrow-back.svg" alt="back" /></button> <p>Назад </p> </Link>
+        <Link to={"/catalog"} className="btn-back_wrap"> <button className="btn-back btn"><img src="./images/arrow-back.svg" alt="back" /></button> <p>Назад </p> </Link>
         <div className="box__left">
           <img
             className="box__left--img"
@@ -56,8 +56,8 @@ export const ProductPage: FC = () => {
                 <img
                   src={
                     product.unit === "Вес"
-                      ? "/images/box-icon.svg"
-                      : "/images/bottle-icon.svg"
+                      ? "./images/box-icon.svg"
+                      : "./images/bottle-icon.svg"
                   }
                   alt="box-icon"
                   className="icon"
@@ -81,7 +81,7 @@ export const ProductPage: FC = () => {
                     }}
                   >
                     В корзину
-                    <img src="/images/basket-white.svg" alt="basket-white" />
+                    <img src="./images/basket-white.svg" alt="basket-white" />
                   </button>
                 </div>
               </div>
@@ -99,13 +99,13 @@ export const ProductPage: FC = () => {
               В корзину
             </button>
             <div className="box__sm--icon">
-              <img src="/images/share.svg" alt="share" />
+              <img src="./images/share.svg" alt="share" />
             </div>
           </div>
 
           <div className="box__info">
             <div className="box__info--icon">
-              <img src="/images/share.svg" alt="share" />
+              <img src="./images/share.svg" alt="share" />
             </div>
             <div className="box__info--text">
               <div className="box__info--t">
@@ -116,7 +116,7 @@ export const ProductPage: FC = () => {
             <div className="box__info--link">
               Прайс-лист
               <img
-                src="/images/save.svg"
+                src="./images/save.svg"
                 alt="save"
                 style={{ marginLeft: "10px" }}
               />
@@ -154,7 +154,7 @@ export const ProductPage: FC = () => {
           <div className="box__line"></div>
 
           <div onClick={handleClickDesc} className="box__toogle">
-            Характеристика{" "}
+            Характеристика
             {isShownFeature ? <MdArrowDropDown /> : <MdArrowDropUp />}
           </div>
           <div style={{ display: isShownFeature ? "none" : "block" }}>

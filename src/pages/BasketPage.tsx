@@ -15,7 +15,7 @@ const BasketPage: FC = () => {
     if (img.includes("http")) {
       return img;
     } else {
-      return `/images/${basket[i].product.img}`;
+      return `./images/${basket[i].product.img}`;
     }
   };
   // btn НАЗАД
@@ -39,7 +39,7 @@ const BasketPage: FC = () => {
   };
   return (
     <div className="bask">
-      <Link to={"/catalog"} className="btn-back_wrap"> <button className="btn-back btn"><img src="../images/arrow-back.svg" alt="back" /></button> <p>Назад </p> </Link>
+      <Link to={"/catalog"} className="btn-back_wrap"> <button className="btn-back btn"><img src="./images/arrow-back.svg" alt="back" /></button> <p>Назад </p> </Link>
 
 
 
@@ -70,13 +70,13 @@ const BasketPage: FC = () => {
                   <img
                     src={
                       item.product.unit === "Вес"
-                        ? "/images/box-icon.svg"
-                        : "/images/bottle-icon.svg"
+                        ? "./images/box-icon.svg"
+                        : "./images/bottle-icon.svg"
                     }
                     alt="box-icon"
                   />
                   <p className="bask__card--size-text">
-                    {item.product.size}{" "}
+                    {item.product.size}
                     {item.product.unit === "Вес" ? " гр" : " мл"}
                   </p>
                 </div>
@@ -104,7 +104,7 @@ const BasketPage: FC = () => {
                     dispatch(deleteProduct(item.product));
                   }}
                 >
-                  <img src="/images/basket-card.svg" alt="basket-card" />
+                  <img src="./images/basket-card.svg" alt="basket-card" />
                 </button>
               </div>
             </div>
@@ -124,7 +124,7 @@ const BasketPage: FC = () => {
             closeDialog();
           }}
         >
-          <Link to={"/catalog"}>Спасибо!</Link>{" "}
+          <Link to={"/catalog"}>Спасибо!</Link>
         </button>
       </dialog>
 

@@ -1,6 +1,7 @@
 {
   "name": "react-shop-project",
   "version": "0.1.0",
+  "homepage": "https://strigina-nadezhda.github.io/sultan-shop-react",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",

@@ -9,10 +9,10 @@ const Footer: React.FC = () => {
         <div className="a">
           <div className="logo">
             <div className="mobile-logo">
-              <img src="/images/footer-logo.svg" alt="logo" className="logo-img" />
+              <img src="./images/footer-logo.svg" alt="logo" className="logo-img" />
               <button className="btn ">
                 Прайс-лист<img
-                  src="/images/download.svg"
+                  src="./images/download.svg"
                   alt="arrow"
                   className="btn-icon"
                 />
@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
             </div>
 
             <p>
-              Компания «Султан» — снабжаем розничные магазины товарами <br />{" "}
+              Компания «Султан» — снабжаем розничные магазины товарами <br />
               "под ключ" в Кокчетаве и Акмолинской области
             </p>
           </div>
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
                 placeholder="Введите ваш E-mail"
               />
               <button id="searchBtn" type="submit" name="searchBtn">
-                <img src="/images/arrow.svg" alt="icon" />
+                <img src="./images/arrow.svg" alt="icon" />
               </button>
             </div>
           </div>
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
             <li>
               <a href="/" className="link">
                 О компании
-              </a>{" "}
+              </a>
             </li>
             <li>
               <a href="/" className="link">
@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
             <li>
               <a href="/" className="link">
                 Контакты
-              </a>{" "}
+              </a>
             </li>
           </ul>
         </div>
@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
             <li>
               <a href="" className="link">
                 Бытовая химия
-              </a>{" "}
+              </a>
             </li>
             <li>
               <a href="" className="link">
@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
             <li>
               <a href="" className="link">
                 Товары для детей и мам
-              </a>{" "}
+              </a>
             </li>
             <li>
               <a href="" className="link">
@@ -102,9 +102,9 @@ const Footer: React.FC = () => {
           <div >
             <p className="title">Скачать прайс-лист:</p>
             <button className="btn ">
-              Прайс-лист{" "}
+              Прайс-лист
               <img
-                src="/images/download.svg"
+                src="./images/download.svg"
                 alt="arrow"
                 className="btn-icon"
               />
@@ -114,8 +114,8 @@ const Footer: React.FC = () => {
           <div className="mt20">
             <p className="link">Связь в мессенджерах:</p>
             <div className="icons">
-              <img src="/images/footer-logo_telegram.svg" alt="telegram" />
-              <img src="/images/footer-logo_WA.svg" alt="WA" />
+              <img src="./images/footer-logo_telegram.svg" alt="telegram" />
+              <img src="./images/footer-logo_WA.svg" alt="WA" />
             </div>
           </div>
         </div>
@@ -134,8 +134,8 @@ const Footer: React.FC = () => {
               <p className="link xs think"> На связи в любое время</p>
             </div>
             <div className="icons">
-              <img src="/images/footer-logo_VISA.svg" alt="visa" />
-              <img src="/images/footer-logo_MASTERCARD.svg" alt="mastercard" />
+              <img src="./images/footer-logo_VISA.svg" alt="visa" />
+              <img src="./images/footer-logo_MASTERCARD.svg" alt="mastercard" />
             </div>
           </div>
         </div>
@@ -157,16 +157,16 @@ const Footer: React.FC = () => {
                   <p className="link xs think"> На связи в любое время</p>
                 </div>
                 <div className="icons">
-                  <img src="/images/footer-logo_VISA.svg" alt="visa" />
-                  <img src="/images/footer-logo_MASTERCARD.svg" alt="mastercard" />
+                  <img src="./images/footer-logo_VISA.svg" alt="visa" />
+                  <img src="./images/footer-logo_MASTERCARD.svg" alt="mastercard" />
                 </div>
               </div>
             </div>
             <div className="mobile-contact_messagers">
               <p className="link">Связь в мессенджерах:</p>
               <div className="icons">
-                <img src="/images/footer-logo_telegram.svg" alt="telegram" />
-                <img src="/images/footer-logo_WA.svg" alt="WA" />
+                <img src="./images/footer-logo_telegram.svg" alt="telegram" />
+                <img src="./images/footer-logo_WA.svg" alt="WA" />
               </div>
             </div>
           </div>

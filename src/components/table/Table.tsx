@@ -13,7 +13,7 @@ export const Table = () => {
     if (img.includes("http")) {
       return img;
     } else {
-      return `/images/${products[i].bigImg}`;
+      return `./images/${products[i].bigImg}`;
     }
   };
 
@@ -47,15 +47,15 @@ export const Table = () => {
                 className="btn-table btn"
                 onClick={() => dispatch(openEditProductDialog(product))}
               >
-                {" "}
-                <BiPencil size="2em" />{" "}
+
+                <BiPencil size="2em" />
               </button>
               <button
                 className="btn-table btn"
                 onClick={() => dispatch(deleteProduct(product))}
               >
-                {" "}
-                <BiTrash size="2em" />{" "}
+
+                <BiTrash size="2em" />
               </button>
             </td>
           </tr>

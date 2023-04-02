@@ -23,7 +23,7 @@ const HeaderMobile: React.FC = () => {
         <button className="header__nav--dropdown" onClick={() => menuToogle()}>
           {isShownToogle ? <MdDensityMedium /> : <MdClose />}
         </button>
-        <img src="/images/header-logo.svg" alt="card" />
+        <img src="./images/header-logo.svg" alt="card" />
         <div className="basket">
           <Link to={"/basket"}>
             <div className="basket-wrap">
@@ -38,7 +38,7 @@ const HeaderMobile: React.FC = () => {
       <div className="header__menu">
         <Link to={"/catalog"}>
           <button className="header__menu--catalog">
-            <img src="/images/catalog.svg" alt="arrow" className="btn-icon" />
+            <img src="./images/catalog.svg" alt="arrow" className="btn-icon" />
             Каталог
           </button>
         </Link>
@@ -47,7 +47,7 @@ const HeaderMobile: React.FC = () => {
 
         <div className="header__menu--search">
           <button id="searchBtn" type="submit" name="searchBtn">
-            <img src="/images/search.svg" alt="icon" />
+            <img src="./images/search.svg" alt="icon" />
           </button>
           <input
             id="searchInput"
@@ -103,7 +103,7 @@ const HeaderMobile: React.FC = () => {
             <button className="btn">
               Прайс-лист
               <img
-                src="/images/download.svg"
+                src="./images/download.svg"
                 alt="arrow"
                 className="btn-icon"
               />

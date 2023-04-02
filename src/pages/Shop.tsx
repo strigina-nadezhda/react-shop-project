@@ -29,7 +29,7 @@ const Shop: FC = () => {
   return (
     <div className="catalog">
 
-      <Link to={"/"} className="btn-back_wrap"> <button className="btn-back btn"><img src="../images/arrow-back.svg" alt="back" /></button> <p>Назад </p> </Link>
+      <Link to={"/"} className="btn-back_wrap"> <button className="btn-back btn"><img src="./images/arrow-back.svg" alt="back" /></button> <p>Назад </p> </Link>
 
       <div className="sort-wrapper">
 
@@ -50,7 +50,7 @@ const Shop: FC = () => {
             >
               <p> {type.split(" ")[0]}</p>
               <p>
-                {" "}
+
                 {type.split(" ")[1]} {type.split(" ")[2]}
               </p>
             </li>
@@ -83,7 +83,7 @@ const Shop: FC = () => {
               onClick={() => dispatch(changePage(pageNum - 1))}
               className="page-btn"
             >
-              <img src="/images/arrow-left.svg" alt="left" />
+              <img src="./images/arrow-left.svg" alt="left" />
             </button>
 
             {pages.map((product, i) => (
@@ -103,8 +103,8 @@ const Shop: FC = () => {
                 : { disabled: false })}
               className="page-btn"
             >
-              {" "}
-              <img src="/images/arrow-right.svg" alt="left" />
+
+              <img src="./images/arrow-right.svg" alt="left" />
             </button>
           </div>
         </div>

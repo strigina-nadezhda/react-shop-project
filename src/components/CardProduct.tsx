@@ -18,7 +18,7 @@ export const CardProduct: FC<IProduct> = (product: IProduct) => {
     if (img.includes("http")) {
       return img;
     } else {
-      return `/images/${product.img}`;
+      return `./images/${product.img}`;
     }
   };
 
@@ -40,8 +40,8 @@ export const CardProduct: FC<IProduct> = (product: IProduct) => {
         <img
           src={
             product.unit === "Вес"
-              ? "/images/box-icon.svg"
-              : "/images/bottle-icon.svg"
+              ? "./images/box-icon.svg"
+              : "./images/bottle-icon.svg"
           }
           alt="box-icon"
           className="icon"
@@ -73,8 +73,8 @@ export const CardProduct: FC<IProduct> = (product: IProduct) => {
             dispatch(addProduct(product));
           }}
         >
-          В корзину{" "}
-          <img src="/images/basket-btn.svg" alt="arrow" className="btn-icon" />
+          В корзину
+          <img src="./images/basket-btn.svg" alt="arrow" className="btn-icon" />
         </button>
         <BasketCounterBtn {...product} />
       </div>
