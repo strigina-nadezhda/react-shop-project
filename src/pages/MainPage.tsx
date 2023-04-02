@@ -1,9 +1,11 @@
 import React, { FC } from "react";
+import { Link } from "react-router-dom";
 
 const MainPage: FC = () => {
     return (
-        <div>
-            <h1>Главная страница</h1>
+        <div className="main-page">
+            <Link to={"/catalog"}><img src="/images/Баннер.png" alt="main" className="main-img" />
+            </Link>
         </div>
     );
 };

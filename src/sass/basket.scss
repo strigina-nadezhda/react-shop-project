@@ -46,20 +46,18 @@ $yellow-2-color: rgba(255, 198, 80, 0.3);
 
     &__title {
         font-weight: 500;
-        font-size: 20px;
+        font-size: 40px;
         text-transform: uppercase;
         color: $black-text-color;
         margin: 0;
 
         @media (max-width:900px) {
             margin-top: 25px;
-
-        }
-
-        @media(max-width: 600px) {
             font-weight: 500;
-            font-size: 50px;
+            font-size: 20px;
         }
+
+
 
     }
 

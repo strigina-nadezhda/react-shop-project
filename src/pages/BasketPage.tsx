@@ -55,7 +55,7 @@ const BasketPage: FC = () => {
 
       <div className="basket-products">
         {basket.map((item, i) => (
-          <div>
+          <div key={i}>
             <div className="bask__card">
               <div className="bask__card--img">
                 <img

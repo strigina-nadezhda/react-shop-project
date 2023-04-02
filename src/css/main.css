@@ -126,4 +126,12 @@ a {
   margin: 0;
 }
 
+.main-page {
+  max-width: 100%;
+}
+.main-page .main-img {
+  object-fit: contain;
+  max-width: inherit;
+}
+
 /*# sourceMappingURL=main.css.map */

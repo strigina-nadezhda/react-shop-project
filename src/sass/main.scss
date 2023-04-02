@@ -149,3 +149,12 @@ a {
     }
 
 }
+
+.main-page {
+    max-width: 100%;
+
+    .main-img {
+        object-fit: contain;
+        max-width: inherit;
+    }
+}

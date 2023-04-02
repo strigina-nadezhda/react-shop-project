@@ -35,7 +35,7 @@
 }
 .bask__title {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 40px;
   text-transform: uppercase;
   color: #111111;
   margin: 0;
@@ -43,12 +43,8 @@
 @media (max-width: 900px) {
   .bask__title {
     margin-top: 25px;
-  }
-}
-@media (max-width: 600px) {
-  .bask__title {
     font-weight: 500;
-    font-size: 50px;
+    font-size: 20px;
   }
 }
 .bask__line {
