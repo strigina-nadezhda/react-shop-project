@@ -1,18 +1,20 @@
 import { FC, useState } from "react";
 import { MdArrowDropDown, MdArrowDropUp } from "react-icons/md";
 import { manufactorerFilterChanged, toggleManufacturer } from "../features/shop_options/slice";
-import { ShopSelector } from "../features/shop_options/selector";
-import { useAppDispatch, useAppSelector } from "../store/hooks";
+import { ShopOptionsSelector } from "../features/shop_options/selector";
+import { useAppDispatch } from "../store/hooks";
+import { ShopSelector } from "../features/shop/selector";
+import { useOptionsSelector, useShopSelector } from "../store/appSelectors";
 
 export const ManufacturerFilter: FC = () => {
-    const manufacturers = useAppSelector(ShopSelector.filteredManufacturers);
+    const manufacturers = useShopSelector(ShopSelector.filteredManufacturers);
 
 
-    const manufacturersFilter = useAppSelector(ShopSelector.manufactorerFilter);
+    const manufacturersFilter = useOptionsSelector(ShopOptionsSelector.manufactorerFilter);
     const firstFiveManufacturers = [...manufacturers].splice(0, 5);
 
-    const counters = useAppSelector(ShopSelector.productCountersByManifacturer);
-    const selectedManufactorers = useAppSelector(ShopSelector.selectedManufactorers);
+    const counters = useShopSelector(ShopSelector.productCountersByManifacturer);
+    const selectedManufactorers = useOptionsSelector(ShopOptionsSelector.selectedManufactorers);
 
     const dispatch = useAppDispatch();
 

@@ -1,4 +1,5 @@
 import { RootState } from ".";
+import { ShopState } from "../features/shop/selector";
 import { useAppSelector } from "../store/hooks";
 
 type Selector<State, Selected> = (state: State) => Selected;
@@ -23,9 +24,17 @@ export const useBasketSelector = createLocalSelectorHook(
   (state) => state.basket
 );
 export const useAdminSelector = createLocalSelectorHook((state) => state.admin);
-export const useShopSelector = createLocalSelectorHook(
+export const useOptionsSelector = createLocalSelectorHook(
   (state) => state.shopOptions
 );
 export const useProductsSelector = createLocalSelectorHook(
   (state) => state.products
 );
+export const useShopSelector = createLocalSelectorHook(toShopState);
+
+function toShopState(state: RootState): ShopState {
+  return {
+    shopOptions: state.shopOptions,
+    products: state.products,
+  };
+}

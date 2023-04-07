@@ -10,7 +10,7 @@ export interface ShopFilters {
   selectedCategories: string[];
 }
 
-export interface ShopOpitonsState {
+export interface ShopOptionsState {
   sortKey: Sort;
   page: number;
   filters: ShopFilters;
@@ -18,7 +18,7 @@ export interface ShopOpitonsState {
 
 export type Sort = "titleUp" | "titleDown" | "priceUp" | "priceDown";
 
-const initialState: ShopOpitonsState = {
+const initialState: ShopOptionsState = {
   sortKey: "titleUp",
   page: 0,
   filters: {

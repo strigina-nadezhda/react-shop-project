@@ -1,12 +1,13 @@
 import { BiPencil, BiTrash } from "react-icons/bi";
 import { openEditProductDialog } from "../../features/admin/slice";
 import { deleteProduct } from "../../features/products/slice";
-import { ShopSelector } from "../../features/shop_options/selector";
 import { IProduct } from "../../store/types/types";
-import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { useAppDispatch } from "../../store/hooks";
+import { ShopSelector } from "../../features/shop/selector";
+import { useShopSelector } from "../../store/appSelectors";
 
 export const Table = () => {
-  const products = useAppSelector(ShopSelector.filteredProducts);
+  const products = useShopSelector(ShopSelector.filteredProducts);
   const dispatch = useAppDispatch();
 
   const imgSrc = (img: string, i: number) => {

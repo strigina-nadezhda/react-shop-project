@@ -1,8 +1,8 @@
-import reducer, { ShopOpitonsState, changePriceRangeStart } from '../features/shop_options/slice'
+import reducer, { ShopOptionsState, changePriceRangeStart } from '../features/shop_options/slice'
 //import {filteredProducts} from '../features/shop/selector'
 
 test('price range filter', () => {
-    const previousState: ShopOpitonsState = {
+    const previousState: ShopOptionsState = {
         sortKey: 'titleUp',
         page: 0,
         filters: {
@@ -16,7 +16,7 @@ test('price range filter', () => {
         },
     };
 
-    const nextState: ShopOpitonsState = {
+    const nextState: ShopOptionsState = {
         sortKey: 'titleUp',
         page: 0,
         filters: {

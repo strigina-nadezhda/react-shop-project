@@ -3,13 +3,14 @@ import { CardProduct } from "../components/CardProduct";
 import { Filters } from "../components/Filters";
 import { Sort } from "../components/Sort";
 import "../css/shop.css";
-import { ShopSelector } from "../features/shop_options/selector";
+import { ShopOptionsSelector } from "../features/shop_options/selector";
 import { changeCategory, changePage } from "../features/shop_options/slice";
 import { IProduct } from "../store/types/types";
 import { Link } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../store/hooks";
+import { useAppDispatch } from "../store/hooks";
 import { ProductsSelector } from "../features/products/selector";
-import { useProductsSelector } from "../store/appSelectors";
+import { useOptionsSelector, useProductsSelector, useShopSelector } from "../store/appSelectors";
+import { ShopSelector } from "../features/shop/selector";
 
 function createCards(products: IProduct[]) {
   return Array.from(products).map((product: IProduct, index: number) => (
@@ -21,9 +22,9 @@ function createCards(products: IProduct[]) {
 
 const Shop: FC = () => {
   const categories: string[] = useProductsSelector(ProductsSelector.categories);
-  const selectedCategories = useAppSelector(ShopSelector.selectedCategories);
-  const pages = useAppSelector(ShopSelector.filteredProductsPages);
-  const pageNum = useAppSelector(ShopSelector.pageNum);
+  const selectedCategories = useOptionsSelector(ShopOptionsSelector.selectedCategories);
+  const pages = useShopSelector(ShopSelector.filteredProductsPages);
+  const pageNum = useOptionsSelector(ShopOptionsSelector.pageNum);
   const products = pages.length > pageNum ? pages[pageNum] : [];
   const dispatch = useAppDispatch();
 

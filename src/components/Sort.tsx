@@ -1,10 +1,11 @@
 import React from "react";
 import { changeSortKey } from "../features/shop_options/slice";
-import { ShopSelector } from "../features/shop_options/selector";
-import { useAppDispatch, useAppSelector } from "../store/hooks";
+import { ShopOptionsSelector } from "../features/shop_options/selector";
+import { useAppDispatch } from "../store/hooks";
+import { useOptionsSelector } from "../store/appSelectors";
 
 export const Sort: React.FC = () => {
-    const sortKey = useAppSelector(ShopSelector.sortKey);
+    const sortKey = useOptionsSelector(ShopOptionsSelector.sortKey);
     const dispatch = useAppDispatch()
 
     return (

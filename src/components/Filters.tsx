@@ -1,18 +1,18 @@
 import { FC, useState } from "react";
-import { ShopSelector } from "../features/shop_options/selector";
+import { ShopOptionsSelector } from "../features/shop_options/selector";
 import {
   changeCategory,
   changePriceRangeEnd,
   changePriceRangeStart,
 } from "../features/shop_options/slice";
 import { ManufacturerFilter } from "./ManufacturersFilter";
-import { useAppDispatch, useAppSelector } from "../store/hooks";
-import { useProductsSelector } from "../store/appSelectors";
+import { useAppDispatch } from "../store/hooks";
+import { useOptionsSelector, useProductsSelector } from "../store/appSelectors";
 import { ProductsSelector } from "../features/products/selector";
 
 export const Filters: FC = () => {
   const categories = useProductsSelector(ProductsSelector.categories);
-  const selectedCategories = useAppSelector(ShopSelector.selectedCategories);
+  const selectedCategories = useOptionsSelector(ShopOptionsSelector.selectedCategories);
 
   const dispatch = useAppDispatch();
 
