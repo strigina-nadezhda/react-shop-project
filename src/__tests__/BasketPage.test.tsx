@@ -26,7 +26,7 @@ const testProduct: IProduct = {
     "barcode": '1',
     "manufacturer": "Gillette",
     "brand": "Gillette",
-    "description": "пососи",
+    "description": "test test test",
     "price": "666",
     "type": ["Уход за телом", "Приход за телом"]
 };
@@ -60,10 +60,10 @@ describe('basket page', () => {
             { preloadedState: initialState }
         )
 
-        expect(screen.getByText(/пососи/i)).toBeInTheDocument();
+        expect(screen.getByText(/test test test/i)).toBeInTheDocument();
 
         fireEvent.click(screen.getByRole('button', { name: "bask__btn" }));
-        expect(screen.queryByText(/пососи/i)).not.toBeInTheDocument();
+        expect(screen.queryByText(/test test test/i)).not.toBeInTheDocument();
         expect(screen.getByText(/В КОРЗИНЕ НИЧЕГО НЕТ/i)).toBeInTheDocument();
 
     })

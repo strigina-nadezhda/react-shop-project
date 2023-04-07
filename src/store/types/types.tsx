@@ -1,10 +1,5 @@
-import { FC } from "react";
 
 
-
-export interface ITypes {
-    categories: string[]
-}
 export interface IProduct {
     img: string;
     bigImg: string;
@@ -19,21 +14,7 @@ export interface IProduct {
     type?: string[];
 }
 
-export interface IProducts {
-    products: IProduct[];
-}
 
 
-export interface IRoute {
-    path: string,
-    Component: FC,
-    children?: any
 
-}
-
-
-export enum Unit {
-    weight = 'Вес',
-    volume = 'Объём'
-}
 
