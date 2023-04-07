@@ -1,11 +1,14 @@
 import { IProduct } from "../store/types/types";
 import { BasketSelector } from "../features/basket/selector";
 import { addProduct, removeProduct } from "../features/basket/slice";
-import { useAppDispatch, useAppSelector } from "../store/hooks";
+import { useAppDispatch } from "../store/hooks";
+import { useBasketSelector } from "../store/appSelectors";
+
+
 
 export const BasketCounterBtn = (product: IProduct) => {
     const dispatch = useAppDispatch();
-    const count = useAppSelector(BasketSelector.countOfProductInBasket(product));
+    const count = useBasketSelector(BasketSelector.countOfProductInBasket(product));
 
     const inBasket = count > 0;
     return (

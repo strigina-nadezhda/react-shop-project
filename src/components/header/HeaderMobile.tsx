@@ -7,10 +7,10 @@ import { useState } from "react";
 import { HeaderInfo } from "./HeaderInfo";
 import "../../css/headerMobile.css";
 import { HeaderList } from "./HeaderList";
-import { useAppSelector } from "../../store/hooks";
+import { useBasketSelector } from "../../store/appSelectors";
 
 const HeaderMobile: React.FC = () => {
-  const totalCounter = useAppSelector(BasketSelector.totalCount);
+  const totalCounter = useBasketSelector(BasketSelector.totalCount);
 
   const [isShownToogle, setIsToogle] = useState(true);
   const menuToogle = () => {

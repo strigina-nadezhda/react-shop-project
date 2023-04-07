@@ -13,10 +13,10 @@ import MainPage from "./pages/MainPage";
 import { ProductPage } from "./pages/ProductPage";
 import Shop from "./pages/Shop";
 import { IProduct } from "./store/types/types";
-import { useAppSelector } from "./store/hooks";
+import { useProductsSelector } from "./store/appSelectors";
 
 const RouterElement: React.FC = () => {
-  const products = useAppSelector(ProductsSelector.products);
+  const products = useProductsSelector(ProductsSelector.products);
 
   const router = createHashRouter([
     {

@@ -4,10 +4,11 @@ import { BasketCounterBtn } from "../components/BasketCounterBtn";
 import "../sass/basket.scss";
 import { BasketSelector } from "../features/basket/selector";
 import { clearBasket, deleteProduct } from "../features/basket/slice";
-import { useAppDispatch, useAppSelector } from "../store/hooks";
+import { useAppDispatch } from "../store/hooks";
+import { useBasketSelector } from "../store/appSelectors";
 
 const BasketPage: FC = () => {
-  const totalPrice = useAppSelector(BasketSelector.totalPrice);
+  const totalPrice = useBasketSelector(BasketSelector.totalPrice);
 
   //image src
   const imgSrc = (img: string, i: number) => {
@@ -18,7 +19,7 @@ const BasketPage: FC = () => {
     }
   };
 
-  const basket = useAppSelector(BasketSelector.products);
+  const basket = useBasketSelector(BasketSelector.products);
   const dispatch = useAppDispatch();
 
   //dialog

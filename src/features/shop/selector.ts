@@ -3,10 +3,9 @@ import { ShopFilters } from "./slice";
 import { RootState } from "../../store";
 import { IProduct } from "../../store/types/types";
 import { rangeContains } from "../../utils/range";
-import { ProductsSelector } from "../products/selector";
 
 const filters = (state: RootState) => state.shop.filters;
-const products = ProductsSelector.products;
+const products = (state: RootState) => state.products.products;
 
 export namespace ShopSelector {
   export const sortKey = (state: RootState) => state.shop.sortKey;

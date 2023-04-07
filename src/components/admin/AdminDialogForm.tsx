@@ -7,11 +7,12 @@ import { addProduct } from "../../features/products/slice";
 import { updateProduct } from "../../features/products/slice";
 import { closeDialog } from "../../features/admin/slice";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { useAdminSelector } from "../../store/appSelectors";
 
 export const AdminDialogForm: FC = () => {
-  const product = useAppSelector(AdminSelector.editableProduct);
+  const product = useAdminSelector(AdminSelector.editableProduct);
   const dispatch = useAppDispatch();
-  const editableProduct = useAppSelector(AdminSelector.editableProduct)
+  const editableProduct = useAdminSelector(AdminSelector.editableProduct)
 
   const [isOpenedType, setIsOpened] = useState(true);
   const types = useAppSelector(ShopSelector.categories)

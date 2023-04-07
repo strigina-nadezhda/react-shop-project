@@ -5,12 +5,13 @@ import "../css/adminPage.css";
 import { MdClose } from "react-icons/md";
 import { AdminSelector } from "../features/admin/selector";
 import { closeDialog, openCreateProductDialog } from "../features/admin/slice";
-import { useAppDispatch, useAppSelector } from "../store/hooks";
+import { useAppDispatch } from "../store/hooks";
+import { useAdminSelector } from "../store/appSelectors";
 
 const AdminPage: FC = () => {
   const dispatch = useAppDispatch();
 
-  const isDialogOpen = useAppSelector(AdminSelector.isDialogOpen);
+  const isDialogOpen = useAdminSelector(AdminSelector.isDialogOpen);
 
 
 

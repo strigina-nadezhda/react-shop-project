@@ -4,13 +4,14 @@ import { BasketSelector } from "../features/basket/selector";
 import { addProduct } from "../features/basket/slice";
 import { IProduct } from "../store/types/types";
 import { BasketCounterBtn } from "./BasketCounterBtn";
-import { useAppDispatch, useAppSelector } from "../store/hooks";
+import { useAppDispatch } from "../store/hooks";
+import { useBasketSelector } from "../store/appSelectors";
 
 export const CardProduct: FC<IProduct> = (product: IProduct) => {
   const dispatch = useAppDispatch();
   const history = useNavigate();
 
-  const count = useAppSelector(BasketSelector.countOfProductInBasket(product));
+  const count = useBasketSelector(BasketSelector.countOfProductInBasket(product));
 
   const inBasket = count > 0;
 
