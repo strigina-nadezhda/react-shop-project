@@ -1,14 +1,13 @@
 import { FC, useState } from "react";
-import { MdChevronLeft } from "react-icons/md";
-import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { BasketCounterBtn } from "../components/BasketCounterBtn";
 import "../sass/basket.scss";
 import { BasketSelector } from "../features/basket/selector";
 import { clearBasket, deleteProduct } from "../features/basket/slice";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
 
 const BasketPage: FC = () => {
-  const totalPrice = useSelector(BasketSelector.totalPrice);
+  const totalPrice = useAppSelector(BasketSelector.totalPrice);
 
   //image src
   const imgSrc = (img: string, i: number) => {
@@ -18,14 +17,9 @@ const BasketPage: FC = () => {
       return `./images/${basket[i].product.img}`;
     }
   };
-  // btn НАЗАД
-  const back = (id: any) => {
-    console.log(" back", id);
-    alert("back");
-  };
 
-  const basket = useSelector(BasketSelector.products);
-  const dispatch = useDispatch();
+  const basket = useAppSelector(BasketSelector.products);
+  const dispatch = useAppDispatch();
 
   //dialog
   const [openModal, setOpenModal] = useState(true);

@@ -1,12 +1,11 @@
-import { useDispatch } from "react-redux";
 import { IProduct } from "../store/types/types";
-import { useSelector } from "react-redux";
 import { BasketSelector } from "../features/basket/selector";
 import { addProduct, removeProduct } from "../features/basket/slice";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
 
 export const BasketCounterBtn = (product: IProduct) => {
-    const dispatch = useDispatch();
-    const count = useSelector(BasketSelector.countOfProductInBasket(product));
+    const dispatch = useAppDispatch();
+    const count = useAppSelector(BasketSelector.countOfProductInBasket(product));
 
     const inBasket = count > 0;
     return (

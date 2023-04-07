@@ -1,11 +1,11 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { BasketSelector } from "../../features/basket/selector";
+import { useAppSelector } from "../../store/hooks";
 
 export const HeaderMenu: React.FC = () => {
-  const totalCounter = useSelector(BasketSelector.totalCount);
-  const totalPrice = useSelector(BasketSelector.totalPrice);
+  const totalCounter = useAppSelector(BasketSelector.totalCount);
+  const totalPrice = useAppSelector(BasketSelector.totalPrice);
 
   return (
     <div className="menu">

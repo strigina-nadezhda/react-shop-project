@@ -1,6 +1,4 @@
 import { FC } from "react";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
 import { CardProduct } from "../components/CardProduct";
 import { Filters } from "../components/Filters";
 import { Sort } from "../components/Sort";
@@ -9,6 +7,7 @@ import { ShopSelector } from "../features/shop/selector";
 import { changeCategory, changePage } from "../features/shop/slice";
 import { IProduct } from "../store/types/types";
 import { Link } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
 
 function createCards(products: IProduct[]) {
   return Array.from(products).map((product: IProduct, index: number) => (
@@ -19,12 +18,12 @@ function createCards(products: IProduct[]) {
 }
 
 const Shop: FC = () => {
-  const categories: string[] = useSelector(ShopSelector.categories);
-  const selectedCategories = useSelector(ShopSelector.selectedCategories);
-  const pages = useSelector(ShopSelector.filteredProductsPages);
-  const pageNum = useSelector(ShopSelector.pageNum);
+  const categories: string[] = useAppSelector(ShopSelector.categories);
+  const selectedCategories = useAppSelector(ShopSelector.selectedCategories);
+  const pages = useAppSelector(ShopSelector.filteredProductsPages);
+  const pageNum = useAppSelector(ShopSelector.pageNum);
   const products = pages.length > pageNum ? pages[pageNum] : [];
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   return (
     <div className="catalog">

@@ -1,21 +1,20 @@
 import { FC } from "react";
 import { useState } from "react";
-import { useSelector } from "react-redux";
 import { ShopSelector } from "../../features/shop/selector";
 import { AdminSelector } from "../../features/admin/selector";
-import { useDispatch } from "react-redux";
 import { IProduct } from "../../store/types/types";
 import { addProduct } from "../../features/products/slice";
 import { updateProduct } from "../../features/products/slice";
 import { closeDialog } from "../../features/admin/slice";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
 
 export const AdminDialogForm: FC = () => {
-  const product = useSelector(AdminSelector.editableProduct);
-  const dispatch = useDispatch();
-  const editableProduct = useSelector(AdminSelector.editableProduct)
+  const product = useAppSelector(AdminSelector.editableProduct);
+  const dispatch = useAppDispatch();
+  const editableProduct = useAppSelector(AdminSelector.editableProduct)
 
   const [isOpenedType, setIsOpened] = useState(true);
-  const types = useSelector(ShopSelector.categories)
+  const types = useAppSelector(ShopSelector.categories)
 
   const showCheckboxes = () => {
     setIsOpened((current) => !current);

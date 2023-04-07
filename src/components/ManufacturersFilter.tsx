@@ -1,21 +1,20 @@
 import { FC, useState } from "react";
 import { MdArrowDropDown, MdArrowDropUp } from "react-icons/md";
 import { manufactorerFilterChanged, toggleManufacturer } from "../features/shop/slice";
-import { useSelector } from "react-redux";
 import { ShopSelector } from "../features/shop/selector";
-import { useDispatch } from "react-redux";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
 
 export const ManufacturerFilter: FC = () => {
-    const manufacturers = useSelector(ShopSelector.filteredManufacturers);
+    const manufacturers = useAppSelector(ShopSelector.filteredManufacturers);
 
 
-    const manufacturersFilter = useSelector(ShopSelector.manufactorerFilter);
+    const manufacturersFilter = useAppSelector(ShopSelector.manufactorerFilter);
     const firstFiveManufacturers = [...manufacturers].splice(0, 5);
 
-    const counters = useSelector(ShopSelector.productCountersByManifacturer);
-    const selectedManufactorers = useSelector(ShopSelector.selectedManufactorers);
+    const counters = useAppSelector(ShopSelector.productCountersByManifacturer);
+    const selectedManufactorers = useAppSelector(ShopSelector.selectedManufactorers);
 
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
 
     // Показать/скрыть
     const [isShownAll, setIsShownAll] = useState(true);

@@ -1,18 +1,16 @@
 import React, { FC } from "react";
 import { Table } from "../components/table/Table";
 import { AdminDialogForm } from "../components/admin/AdminDialogForm";
-
 import "../css/adminPage.css";
 import { MdClose } from "react-icons/md";
-import { useSelector } from "react-redux";
 import { AdminSelector } from "../features/admin/selector";
-import { useDispatch } from "react-redux";
 import { closeDialog, openCreateProductDialog } from "../features/admin/slice";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
 
 const AdminPage: FC = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
-  const isDialogOpen = useSelector(AdminSelector.isDialogOpen);
+  const isDialogOpen = useAppSelector(AdminSelector.isDialogOpen);
 
 
 

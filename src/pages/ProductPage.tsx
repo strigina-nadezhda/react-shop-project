@@ -1,16 +1,16 @@
 import { FC, useState } from "react";
 import { MdArrowDropDown, MdArrowDropUp } from "react-icons/md";
-import { useDispatch } from "react-redux";
 import { useLoaderData } from "react-router";
 import { BasketCounterBtn } from "../components/BasketCounterBtn";
 import "../css/productPage.css";
 import { addProduct } from "../features/basket/slice";
 import { IProduct } from "../store/types/types";
 import { Link } from "react-router-dom";
+import { useAppDispatch } from "../store/hooks";
 
 export const ProductPage: FC = () => {
   const product = useLoaderData() as IProduct;
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const imgSrc = (img: string) => {
     if (img.includes("http")) {

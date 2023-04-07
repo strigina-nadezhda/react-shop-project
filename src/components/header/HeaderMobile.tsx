@@ -1,16 +1,16 @@
 import React from "react";
 // import "../../css/headerMobile.css";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
 import { BasketSelector } from "../../features/basket/selector";
 import { MdDensityMedium, MdClose, MdPhone } from "react-icons/md";
-import { FC, useState } from "react";
+import { useState } from "react";
 import { HeaderInfo } from "./HeaderInfo";
 import "../../css/headerMobile.css";
 import { HeaderList } from "./HeaderList";
+import { useAppSelector } from "../../store/hooks";
 
 const HeaderMobile: React.FC = () => {
-  const totalCounter = useSelector(BasketSelector.totalCount);
+  const totalCounter = useAppSelector(BasketSelector.totalCount);
 
   const [isShownToogle, setIsToogle] = useState(true);
   const menuToogle = () => {

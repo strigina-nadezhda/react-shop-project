@@ -1,30 +1,18 @@
 import { FC, useState } from "react";
-import { MdArrowDropDown, MdArrowDropUp } from "react-icons/md";
-import { useDispatch, useSelector } from "react-redux";
 import { ShopSelector } from "../features/shop/selector";
 import {
   changeCategory,
   changePriceRangeEnd,
   changePriceRangeStart,
-  manufactorerFilterChanged,
-  toggleManufacturer,
 } from "../features/shop/slice";
 import { ManufacturerFilter } from "./ManufacturersFilter";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
 
 export const Filters: FC = () => {
-  //массив производителей
+  const categories: string[] = useAppSelector(ShopSelector.categories);
+  const selectedCategories = useAppSelector(ShopSelector.selectedCategories);
 
-
-  const categories: string[] = useSelector(ShopSelector.categories);
-  const selectedCategories = useSelector(ShopSelector.selectedCategories);
-
-  const dispatch = useDispatch();
-
-  // Показать/скрыть
-  const [isShownAll, setIsShownAll] = useState(true);
-  const toogleAll = () => {
-    setIsShownAll((current) => !current);
-  };
+  const dispatch = useAppDispatch();
 
   //показать/скрыть фильтры на мобилке
   const [isShow, setIsShow] = useState(false);

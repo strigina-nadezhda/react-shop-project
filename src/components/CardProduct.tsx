@@ -1,16 +1,16 @@
 import { FC } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { BasketSelector } from "../features/basket/selector";
 import { addProduct } from "../features/basket/slice";
 import { IProduct } from "../store/types/types";
 import { BasketCounterBtn } from "./BasketCounterBtn";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
 
 export const CardProduct: FC<IProduct> = (product: IProduct) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const history = useNavigate();
 
-  const count = useSelector(BasketSelector.countOfProductInBasket(product));
+  const count = useAppSelector(BasketSelector.countOfProductInBasket(product));
 
   const inBasket = count > 0;
 

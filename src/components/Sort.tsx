@@ -1,11 +1,11 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { changeSortKey } from "../features/shop/slice";
 import { ShopSelector } from "../features/shop/selector";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
 
 export const Sort: React.FC = () => {
-    const sortKey = useSelector(ShopSelector.sortKey);
-    const dispatch = useDispatch()
+    const sortKey = useAppSelector(ShopSelector.sortKey);
+    const dispatch = useAppDispatch()
 
     return (
         <div className="sort">
