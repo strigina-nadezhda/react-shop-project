@@ -41,15 +41,17 @@ export const { addProduct, updateProduct, deleteProduct } =
 export default productsSlice.reducer;
 
 function _readProducts(): IProduct[] {
-  const productsJson = localStorage.getItem("products");
+  try {
+    const productsJson = localStorage.getItem("products");
 
-  if (productsJson) {
-    const list = JSON.parse(productsJson);
+    if (productsJson) {
+      const list = JSON.parse(productsJson);
 
-    if (list && list.length > 0) {
-      return list;
+      if (list && list.length > 0) {
+        return list;
+      }
     }
-  }
+  } catch (e) {}
 
   return products;
 }

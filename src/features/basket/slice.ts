@@ -59,10 +59,12 @@ export const { addProduct, removeProduct, deleteProduct, clearBasket } =
 export default basketSlice.reducer;
 
 function _readInitialBasket(): BasketState | null {
-  const json = localStorage.getItem("basket");
-  if (json) {
-    return JSON.parse(json);
-  }
+  try {
+    const json = localStorage.getItem("basket");
+    if (json) {
+      return JSON.parse(json);
+    }
+  } catch (e) {}
 
   return null;
 }

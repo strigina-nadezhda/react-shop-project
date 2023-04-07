@@ -3,7 +3,7 @@ import { MdChevronLeft } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { BasketCounterBtn } from "../components/BasketCounterBtn";
-import "../css/basket.css";
+import "../sass/basket.scss";
 import { BasketSelector } from "../features/basket/selector";
 import { clearBasket, deleteProduct } from "../features/basket/slice";
 
@@ -39,7 +39,12 @@ const BasketPage: FC = () => {
   };
   return (
     <div className="bask">
-      <Link to={"/catalog"} className="btn-back_wrap"> <button className="btn-back btn"><img src="./images/arrow-back.svg" alt="back" /></button> <p>Назад </p> </Link>
+      <Link to={"/catalog"} className="btn-back_wrap">
+        <button className="btn-back btn">
+          <img src="./images/arrow-back.svg" alt="back" />
+        </button>
+        <p>Назад </p>
+      </Link>
 
 
 
@@ -98,6 +103,7 @@ const BasketPage: FC = () => {
                 <hr className="bask__vertical"></hr>
 
                 <button
+                  aria-label="bask__btn"
                   type="button"
                   className="bask__btn"
                   onClick={() => {
@@ -143,7 +149,7 @@ const BasketPage: FC = () => {
         >
           Оформить заказ
         </button>
-        <div className="bask__sum">{totalPrice} ₸</div>
+        <div className="bask__sum" data-testid="totalPrice">{totalPrice} ₸</div>
       </div>
     </div>
   );

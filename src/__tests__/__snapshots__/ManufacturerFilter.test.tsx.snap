@@ -1,0 +1,2191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`show manufacturers filters 1`] = `
+<div
+  className="manufacturer"
+>
+  <h4>
+     Производитель
+  </h4>
+  <div
+    className="manufacturer-input"
+  >
+    <input
+      id="searchInput"
+      name="searchInput"
+      onChange={[Function]}
+      placeholder="Поиск..."
+      type="text"
+      value=""
+    />
+    <button
+      id="searchBtn"
+      name="searchBtn"
+      type="submit"
+    >
+      <img
+        alt="icon"
+        src="./images/search.svg"
+      />
+    </button>
+  </div>
+  <div
+    className="manufacturer-chekbox"
+  >
+    <div
+      style={
+        {
+          "display": "block",
+        }
+      }
+    >
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="0"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          Gillette
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="1"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          UNIDIP
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="2"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          GORDANA
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="3"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          natonica med
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="4"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          DMS PROFESSIONAL
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+    </div>
+    <div
+      style={
+        {
+          "display": "none",
+        }
+      }
+    >
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="0"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          Gillette
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="1"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          UNIDIP
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="2"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          GORDANA
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="3"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          natonica med
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="4"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          DMS PROFESSIONAL
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="5"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          SesdermaТ
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="6"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          TG TeploGroup
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="7"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          Корега
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="8"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          Nivea
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="9"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          Рецепты бабушки
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="10"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          ART&FACT.
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          2
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="11"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          HCHANA
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="12"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          LA ROCHE-POSAY
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="13"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          TopTech
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="14"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          Arko
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="15"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          AXE
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="16"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          LIBREDERM
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="17"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          Biomed
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="18"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          Zewa
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="19"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          LuLo
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+    </div>
+    <div
+      className="box__toogle"
+      onClick={[Function]}
+    >
+      Показать все 
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`show manufacturers filters 2`] = `
+<div
+  className="manufacturer"
+>
+  <h4>
+     Производитель
+  </h4>
+  <div
+    className="manufacturer-input"
+  >
+    <input
+      id="searchInput"
+      name="searchInput"
+      onChange={[Function]}
+      placeholder="Поиск..."
+      type="text"
+      value=""
+    />
+    <button
+      id="searchBtn"
+      name="searchBtn"
+      type="submit"
+    >
+      <img
+        alt="icon"
+        src="./images/search.svg"
+      />
+    </button>
+  </div>
+  <div
+    className="manufacturer-chekbox"
+  >
+    <div
+      style={
+        {
+          "display": "none",
+        }
+      }
+    >
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="0"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          Gillette
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="1"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          UNIDIP
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="2"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          GORDANA
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="3"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          natonica med
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="4"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          DMS PROFESSIONAL
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+    </div>
+    <div
+      style={
+        {
+          "display": "block",
+        }
+      }
+    >
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="0"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          Gillette
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="1"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          UNIDIP
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="2"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          GORDANA
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="3"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          natonica med
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="4"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          DMS PROFESSIONAL
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="5"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          SesdermaТ
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="6"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          TG TeploGroup
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="7"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          Корега
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="8"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          Nivea
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="9"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          Рецепты бабушки
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="10"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          ART&FACT.
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          2
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="11"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          HCHANA
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="12"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          LA ROCHE-POSAY
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="13"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          TopTech
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="14"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          Arko
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="15"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          AXE
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="16"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          LIBREDERM
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="17"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          Biomed
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="18"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          Zewa
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="19"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          LuLo
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+    </div>
+    <div
+      className="box__toogle"
+      onClick={[Function]}
+    >
+      Скрыть все 
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+        <path
+          d="M7 14l5-5 5 5z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`show manufacturers filters 3`] = `
+<div
+  className="manufacturer"
+>
+  <h4>
+     Производитель
+  </h4>
+  <div
+    className="manufacturer-input"
+  >
+    <input
+      id="searchInput"
+      name="searchInput"
+      onChange={[Function]}
+      placeholder="Поиск..."
+      type="text"
+      value=""
+    />
+    <button
+      id="searchBtn"
+      name="searchBtn"
+      type="submit"
+    >
+      <img
+        alt="icon"
+        src="./images/search.svg"
+      />
+    </button>
+  </div>
+  <div
+    className="manufacturer-chekbox"
+  >
+    <div
+      style={
+        {
+          "display": "block",
+        }
+      }
+    >
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="0"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          Gillette
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="1"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          UNIDIP
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="2"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          GORDANA
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="3"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          natonica med
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="4"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          DMS PROFESSIONAL
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+    </div>
+    <div
+      style={
+        {
+          "display": "none",
+        }
+      }
+    >
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="0"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          Gillette
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="1"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          UNIDIP
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="2"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          GORDANA
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="3"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          natonica med
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="4"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          DMS PROFESSIONAL
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="5"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          SesdermaТ
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="6"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          TG TeploGroup
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="7"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          Корега
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="8"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          Nivea
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="9"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          Рецепты бабушки
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="10"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          ART&FACT.
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          2
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="11"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          HCHANA
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="12"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          LA ROCHE-POSAY
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="13"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          TopTech
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="14"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          Arko
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="15"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          AXE
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="16"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          LIBREDERM
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="17"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          Biomed
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="18"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          Zewa
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+      <label
+        className="manufacturer-chekbox_lable"
+        htmlFor="chekbox"
+      >
+        <input
+          checked={false}
+          className="manufacturer-chekbox_input"
+          id="19"
+          name="manufacturer"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <p
+          className="think blue"
+        >
+           
+          LuLo
+        </p>
+        <p
+          className="think blue"
+        >
+          (
+          1
+          )
+        </p>
+      </label>
+    </div>
+    <div
+      className="box__toogle"
+      onClick={[Function]}
+    >
+      Показать все 
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+        <path
+          d="M7 10l5 5 5-5z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;

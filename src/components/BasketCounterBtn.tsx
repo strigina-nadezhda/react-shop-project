@@ -12,6 +12,7 @@ export const BasketCounterBtn = (product: IProduct) => {
     return (
         <div className="bask__count" style={{ display: inBasket ? "flex" : "none" }}>
             <button
+                aria-label="bask__count--"
                 className="bask__count--mark"
                 style={{ marginRight: "17px" }}
                 onClick={(e) => {
@@ -21,8 +22,9 @@ export const BasketCounterBtn = (product: IProduct) => {
             >
                 -
             </button>
-            <div>{count}</div>
+            <div data-testid="bask__counter">{count}</div>
             <button
+                aria-label="bask__count++"
                 className="bask__count--mark"
                 style={{ marginLeft: "17px" }}
                 type="button"
