@@ -1,14 +1,16 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import products from "../../products";
+import products, { categories } from "../../products";
 import { IProduct } from "../../store/types/types";
 
 export interface ProductsState {
   products: IProduct[];
+  categories: string[];
 }
 
 const initialState: ProductsState = {
   // products: products.slice(0, 2),
   products: _readProducts(),
+  categories: categories,
 };
 
 export const productsSlice = createSlice({

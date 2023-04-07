@@ -23,7 +23,9 @@ export const useBasketSelector = createLocalSelectorHook(
   (state) => state.basket
 );
 export const useAdminSelector = createLocalSelectorHook((state) => state.admin);
-export const useShopSelector = createLocalSelectorHook((state) => state.shop);
+export const useShopSelector = createLocalSelectorHook(
+  (state) => state.shopOptions
+);
 export const useProductsSelector = createLocalSelectorHook(
   (state) => state.products
 );

@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import { MdArrowDropDown, MdArrowDropUp } from "react-icons/md";
-import { manufactorerFilterChanged, toggleManufacturer } from "../features/shop/slice";
-import { ShopSelector } from "../features/shop/selector";
+import { manufactorerFilterChanged, toggleManufacturer } from "../features/shop_options/slice";
+import { ShopSelector } from "../features/shop_options/selector";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 
 export const ManufacturerFilter: FC = () => {

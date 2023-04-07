@@ -1,6 +1,6 @@
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { createSlice } from "@reduxjs/toolkit";
-import { categories } from "../../products";
+
 import { Range } from "../../utils/range";
 
 export interface ShopFilters {
@@ -10,15 +10,15 @@ export interface ShopFilters {
   selectedCategories: string[];
 }
 
-export interface ShopState {
-  categories: string[];
-  sortKey: string;
+export interface ShopOpitonsState {
+  sortKey: Sort;
   page: number;
   filters: ShopFilters;
 }
 
-const initialState: ShopState = {
-  categories: categories,
+export type Sort = "titleUp" | "titleDown" | "priceUp" | "priceDown";
+
+const initialState: ShopOpitonsState = {
   sortKey: "titleUp",
   page: 0,
   filters: {
@@ -32,12 +32,13 @@ const initialState: ShopState = {
   },
 };
 
-export const shopSlice = createSlice({
-  name: "shop",
+export const shopOptionsSlice = createSlice({
+  name: "shop_options",
   initialState,
   reducers: {
     changeSortKey: (state, action: PayloadAction<string>) => {
-      state.sortKey = action.payload;
+      const sort = action.payload as Sort;
+      state.sortKey = sort;
     },
     toggleManufacturer: (state, action: PayloadAction<string>) => {
       let set = new Set(state.filters.manufacturers);
@@ -82,6 +83,6 @@ export const {
   changePriceRangeEnd,
   changeCategory,
   changePage,
-} = shopSlice.actions;
+} = shopOptionsSlice.actions;
 
-export default shopSlice.reducer;
+export default shopOptionsSlice.reducer;

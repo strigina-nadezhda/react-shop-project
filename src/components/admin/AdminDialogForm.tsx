@@ -1,13 +1,13 @@
 import { FC } from "react";
 import { useState } from "react";
-import { ShopSelector } from "../../features/shop/selector";
 import { AdminSelector } from "../../features/admin/selector";
 import { IProduct } from "../../store/types/types";
 import { addProduct } from "../../features/products/slice";
 import { updateProduct } from "../../features/products/slice";
 import { closeDialog } from "../../features/admin/slice";
-import { useAppDispatch, useAppSelector } from "../../store/hooks";
-import { useAdminSelector } from "../../store/appSelectors";
+import { useAppDispatch } from "../../store/hooks";
+import { useAdminSelector, useProductsSelector } from "../../store/appSelectors";
+import { ProductsSelector } from "../../features/products/selector";
 
 export const AdminDialogForm: FC = () => {
   const product = useAdminSelector(AdminSelector.editableProduct);
@@ -15,7 +15,7 @@ export const AdminDialogForm: FC = () => {
   const editableProduct = useAdminSelector(AdminSelector.editableProduct)
 
   const [isOpenedType, setIsOpened] = useState(true);
-  const types = useAppSelector(ShopSelector.categories)
+  const types = useProductsSelector(ProductsSelector.categories)
 
   const showCheckboxes = () => {
     setIsOpened((current) => !current);

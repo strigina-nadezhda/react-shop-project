@@ -4,15 +4,14 @@ import { RootState } from "../../store";
 import { IProduct } from "../../store/types/types";
 import { rangeContains } from "../../utils/range";
 
-const filters = (state: RootState) => state.shop.filters;
+const filters = (state: RootState) => state.shopOptions.filters;
 const products = (state: RootState) => state.products.products;
 
 export namespace ShopSelector {
-  export const sortKey = (state: RootState) => state.shop.sortKey;
-  export const categories = (state: RootState) => state.shop.categories;
+  export const sortKey = (state: RootState) => state.shopOptions.sortKey;
   export const selectedCategories = (state: RootState) =>
-    state.shop.filters.selectedCategories;
-  export const pageNum = (state: RootState) => state.shop.page;
+    state.shopOptions.filters.selectedCategories;
+  export const pageNum = (state: RootState) => state.shopOptions.page;
 
   export const filteredProducts = createSelector(
     sortKey,
@@ -50,7 +49,7 @@ export namespace ShopSelector {
   );
 
   export const manufactorerFilter = createSelector(
-    (state: RootState) => state.shop.filters.manufacturersFilter,
+    (state: RootState) => state.shopOptions.filters.manufacturersFilter,
     (filter) => filter
   );
 
@@ -80,7 +79,7 @@ export namespace ShopSelector {
   );
 
   export const selectedManufactorers = createSelector(
-    (state: RootState) => state.shop.filters.manufacturers,
+    (state: RootState) => state.shopOptions.filters.manufacturers,
     (categories) => categories
   );
 }

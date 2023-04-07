@@ -6,10 +6,10 @@ import {
 import adminReducer from "../features/admin/slice";
 import basketReducer from "../features/basket/slice";
 import productsReducer from "../features/products/slice";
-import shopReducer from "../features/shop/slice";
+import shopOptionsReducer from "../features/shop_options/slice";
 
 const rootReducer = combineReducers({
-  shop: shopReducer,
+  shopOptions: shopOptionsReducer,
   basket: basketReducer,
   admin: adminReducer,
   products: productsReducer,

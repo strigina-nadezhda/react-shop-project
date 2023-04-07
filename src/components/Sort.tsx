@@ -1,6 +1,6 @@
 import React from "react";
-import { changeSortKey } from "../features/shop/slice";
-import { ShopSelector } from "../features/shop/selector";
+import { changeSortKey } from "../features/shop_options/slice";
+import { ShopSelector } from "../features/shop_options/selector";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 
 export const Sort: React.FC = () => {
